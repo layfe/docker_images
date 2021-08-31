@@ -9,3 +9,4 @@ COPY localhost.crt /etc/nginx/localhost.crt
 EXPOSE 12345
 
 RUN chmod 777 /docker-entrypoint.d/30-nc-server.sh
+RUN apt-get update && apt-get install -y netcat
