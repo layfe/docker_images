@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration result="warn" name="application">
+
+    <Properties>
+        <Property name="format">[%d] %-5p [%t] [%c{1}] %m%n%ex</Property>
+    </Properties>
+
+    <ThresholdFilter level="DEBUG"/>
+
+    <Appenders>
+        <Console name="STDOUT">
+            <PatternLayout pattern="${format}"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Root level="DEBUG">
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+        <logger name="org.apache.hc.client5.http" level="debug"/>
+    </Loggers>
+</Configuration>
